@@ -23,12 +23,14 @@ IAN KNOWLES, ROBERT J. RENKA "METHODS FOR NUMERICAL DIFFERENTIATION OF NOISY DAT
 
 Для того, чтобы файл запускался на вашей локальной машине, необходимо установить следующие библиотеки:
 
->>> numpy
++ numpy
++ scipy
++ tqdm
 
-Для установки numpy пропишите в командной строке
+Для установки данных библиотек пропишите в командной строке соответствующие команды:
 
 ```python
 pip install numpy
+pip install scipy
+pip install tqdm
 ```
-
-
