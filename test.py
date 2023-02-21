@@ -1,4 +1,4 @@
-import reg_func as reg
+import regularization as reg
 import numpy as np
 import matplotlib.pyplot as plt
 
