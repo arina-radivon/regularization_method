@@ -35,4 +35,6 @@ pip install scipy
 pip install tqdm
 ```
 
-[!IMPORTANT](Позже здесь появится функция установки этого пакета через pip install)
+:::IMPORTANT
+Позже здесь появится функция установки этого пакета через pip install
+:::
