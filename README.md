@@ -35,5 +35,5 @@ pip install scipy
 pip install tqdm
 ```
 
-> **WARNING**
+> **Warning**
 > Позже здесь появится функция установки этого пакета через pip install
