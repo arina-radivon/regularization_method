@@ -23,7 +23,7 @@ IAN KNOWLES, ROBERT J. RENKA "METHODS FOR NUMERICAL DIFFERENTIATION OF NOISY DAT
 
 Для того, чтобы файл запускался на вашей локальной машине, необходимо установить следующие библиотеки:
 
-> numpy
+>>> numpy
 
 Для установки numpy пропишите в командной строке
 
