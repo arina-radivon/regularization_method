@@ -37,3 +37,6 @@ pip install tqdm
 
 > **Note**
 > Позже здесь появится функция установки этого пакета через pip install
+
+My important paragraph.
+{: .alert .alert-info}
