@@ -1,5 +1,3 @@
-{::options parse_block_html="true" /}
-
 ## О методе
 
 В данной работе представлена реализация метода регуляризации, описанного в статье 
@@ -39,6 +37,3 @@ pip install tqdm
 
 > **Note**
 > Позже здесь появится функция установки этого пакета через pip install
-
-My important paragraph.
-{: .alert .alert-info}
