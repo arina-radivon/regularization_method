@@ -40,11 +40,14 @@ t_acc, acc_mk, err_acc = reg.regularization(vel, t_vel, err_vel, alpha=9.697e14,
 plt.subplot(1,2,1)
 plt.plot(t_vel,vel*725, label = 'velocity by regularization')
 plt.errorbar(t_vel,vel_mk*725,err_vel*725,fmt='.', label = 'velocity with errors by Monte-Karlo')
+plt.grid()
+plt.legend()
 
 plt.subplot(1,2,2)
 plt.plot(t_acc,acc*725, label = 'velocity by regularization')
 plt.plot(t_acc, np.diff(vel)/np.diff(t_vel)*725)
 plt.errorbar(t_acc,acc_mk*725,err_acc*725,fmt='.', label = 'velocity with errors by Monte-Karlo')
-
 plt.grid()
+plt.legend()
+
 plt.show()

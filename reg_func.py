@@ -72,5 +72,3 @@ def regularization(height, t_height, err_height, alpha, ord, print_parameters=Tr
 
 
 if __name__ == '__main__':
-
-
