@@ -1,9 +1,6 @@
 import numpy as np
-import pandas as pd
 from scipy.optimize import minimize
-import matplotlib.pyplot as plt
 from tqdm import tqdm
-# %matplotlib qt5
 
 
 def A(t_values, t_derivatives, dt):
@@ -72,3 +69,4 @@ def regularization(height, t_height, err_height, alpha, ord, print_parameters=Tr
 
 
 if __name__ == '__main__':
+    pass
