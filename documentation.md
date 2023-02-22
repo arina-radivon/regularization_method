@@ -1,5 +1,5 @@
 
-## regularization(height, t_height, err_height, alpha, ord, print_parameters=True, mk=False, num_mk=100)
+### regularization(*height, t_height, err_height, alpha, ord, print_parameters=True, mk=False, num_mk=100*)
 
 
 По набору координат точек и ошибок получает координаты точек производных методом регуляризации, а также ошибки этих точек методом Монте-Карло.
