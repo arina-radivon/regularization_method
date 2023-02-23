@@ -48,7 +48,7 @@
 Чтобы верно его подобрать, необходимо посмотреть на величину
 
 $$ 
-\frac{\textbardbl A \vec{u} - \stackrel{^}{y} \textbardbl^2}{\textbardbl \delta y \textbardbl ^2}
+\frac{\textbardbl A \vec{u} - \stackrel{\textasciicircum}{y} \textbardbl^2}{\textbardbl \delta y \textbardbl ^2}
 $$
 
 
