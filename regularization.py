@@ -86,7 +86,7 @@ def regularization(height, t_height, err_height, alpha, ord, print_parameters=Tr
     if print_parameters:
         print(optim.message)
         print('quotient =', E(vel,0,height,A_vel,dt_vel,3)/np.linalg.norm(err_height)**2)
-        print('Difference between initial data and integrated regularization results',
+        print('reduced chi2 for integrated regularization results = ',
              (((height_back-height)/err_height)**2).sum()/len(height))
 
     if mk:
