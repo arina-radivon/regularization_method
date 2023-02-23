@@ -48,7 +48,7 @@
 Чтобы верно его подобрать, необходимо посмотреть на величину
 
 $$ 
-\frac{A \vec{u} - \textasciicircum{y}} 
+\frac{A \vec{u} - \textasciicircum{y}}{\delta y}
 $$
 
 
