@@ -80,7 +80,7 @@ def regularization(height, t_height, err_height, alpha, ord, print_parameters=Tr
 
     vel0 = np.diff(height)/np.diff(t_height)
     A_vel = A(t_height, t_vel, dt_vel)
-    optim = minimize(E,vel0,args=(alpha,height,A_vel,dt_vel,ord),method='SLSQP',options={'maxiter':300})
+    optim = minimize(E,vel0,args=(alpha,height,A_vel,dt_vel,ord),method='SLSQP',options={'maxiter':500})
     vel = optim.x
     height_back = integral(A_vel,vel,height[0])
     if print_parameters:
