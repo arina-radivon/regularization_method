@@ -64,6 +64,8 @@ def regularization(height, t_height, err_height, alpha, ord, print_parameters=Tr
                     along the x-axis
             vel - array of derivative values obtained by regularization method
                   along the y-axis
+            height_back - array of distance values obtained by integrating the 
+                          velocities obtained by the method of regularization
         mk=True:
             t_vel - array of derivative values obtained by Monte Carlo method
                     along the x-axis
@@ -100,7 +102,7 @@ def regularization(height, t_height, err_height, alpha, ord, print_parameters=Tr
         err_vel = vel_mk.std(0)
         return t_vel, vel_mk.mean(0), err_vel
 
-    return t_vel, vel
+    return t_vel, vel, height_back
 
 
 if __name__ == '__main__':
