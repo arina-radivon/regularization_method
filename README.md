@@ -27,13 +27,21 @@ In order for the file to run on your local machine, you need to install the foll
 + scipy
 + tqdm
 
-To install these libraries, write the appropriate commands on the command line:
+
+## Installation
+
+This package is to be used with Python 3.x.x
+
+To install tha package write
 
 ```python
-pip install numpy
-pip install scipy
-pip install tqdm
+pip install regularization-derivatives
 ```
 
-> **Note**
-> Позже здесь появится функция установки этого пакета через pip install
+## Usage
+
+To use the package in your project, import it in by writing
+
+```python
+from regularization_derivatives import regularization_derivatives
+```
