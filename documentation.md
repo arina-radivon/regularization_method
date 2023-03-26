@@ -1,79 +1,79 @@
 
-## Параметры функции
+## Parameters of the function
 
 ### regularization(*height, t_height, err_height, alpha, ord, print_parameters=True, mk=False, num_mk=100*)
 
 
-По набору координат точек и ошибок получает координаты точек производных методом регуляризации, а также ошибки этих точек методом Монте-Карло.
+Based on a set of coordinates of points and errors, it obtains the coordinates of points of derivatives by the regularization method, as well as the errors of these points by the Monte Carlo method.
 
-Параметры:
+Parameters:
 
 + **height** : *array_like*
 
-Массив y-координат точек, по которым будет считаться производная
+Array of y-coordinates of points by which the derivative will be calculated
 
 + **t_height** : *array_like*
 
-Массив x-координат точек, по которым будет считаться производная
+Array of x-coordinates of points by which the derivative will be calculated
 
 + **err_height** : *array_like*
 
-Массив ошибок y-координат точек, по которым будет считаться производная
+Array of error y-coordinates of points by which the derivative will be calculated
 
 + **alpha** : *float*
 
-Параметр регуляризации
+Regularization parameter
 
 + **ord** : *int (1, 2 or 3)*
 
-Порядок оператора дифференцирования
+Order of differentiation operator
 
 + **print_parametrs** : *boolean*
 
-Выводит параметры, необходимые для подбора параметра регуляризации *alpha*
+Displays the parameters needed to select the regularization parameter *alpha*
 
 + **mk** : *boolean*
 
-Обсчитывает ошибки полученных точек-производных методом Монте-Карло
+Calculates the errors of the obtained points-derivatives by the Monte Carlo method
 
 + **num_mk** : *int*
 
-Количество итераций в методе Монте-Карло
+Number of iterations in the Monte Carlo method
 
-## Рекомендации по использованию
+## Recommendations for use
 
-### Подбор параметра регуляризации *alpha*
+### Selection of the regularization parameter *alpha*
 
-Основная проблема использования данного метода - это подбор параметра *alpha*.
-Чтобы верно его подобрать, необходимо посмотреть на величину, обозначенную в программе как *quotient*
+The main problem of using this method is the selection of the *alpha* parameter.
+To choose it correctly, you need to look at the value indicated in the program as *quotient*
 
 $$ 
 quotient = \frac{\textbardbl A \vec{u} - \stackrel{\wedge}{y} \textbardbl^2}{\textbardbl \delta y \textbardbl ^2}
 $$
 
-В теории оптимальное значение указанного выше выражения равняется единице. Но на практике часто сложно получить такой идеальный случай, а иногда не только невозможно, но и не нужно. В таком случае стоит руководствоваться принципом: 
+In theory, the optimal value of the above expression is equal to one. But in practice it is often difficult to obtain such an ideal case, and sometimes it is not only impossible, but also unnecessary. In this case, you should be guided by the principle:
 
 > **Note** :
-Чем ближе *quotient* к нулю, тем лучше полученная кривая будет ложиться на данные. Чем ближе *quotient* к единице, тем более гладкой будет полученная кривая.
+The closer *quotient* is to zero, the better the resulting curve will fit the data. The closer *quotient* is to one, the smoother the resulting curve will be.
 
-Для более подробной информации смотрите статью [Радивон А.В, Зимовец И.В](https://kmu.cosmos.ru/docs/2022/KMU-2022-Proceedings-v4.pdf) (*DOI: 10.21046/KMU-2022-112-119*)
-
-> **Warning** :
-> *alpha* для каждой конкретной задачи может сильно отличаться от примерно *1e1* до *1e20*, поэтому при подборе сначала определите степень.
-
-Для прояснения подбора параметра alpha смотрите **example** в данном репозитории
-
-### Выбор порядка оператора дифференцирования ord
-
-В рамках нашей задачи мы хотели получить гладкую функцию ускорения по данным зависимости расстояния от времени. Кривая гладкая, если функция имеет непрерывную производную, тогда в нашем случае порядок оператора дифференцирования *ord* равен 3, так как ускорение это вторая производная координаты, и оно должно быть гладким. Соответственно для ускорения порядок оператора дифференцирования *ord = 2*.
-
-
-### Использование метода Монте-Карло
-
-Метод регуляризации не обеспечен инструментами для оценки ошибок производных, поэтому для этих целей был использован метод Монте-Карло. Для его использования большое количество раз создается набор точек для расстояния в пределах ошибок, а затем методом регуляризации рассчитывается скорость.
-
-Чтобы его использовать, необходимо выставить параметры функции *mk = True* и задать число итераций *num_mk*
+For more information look the article [Radivon A.V., Zimovets I.V.](https://kmu.cosmos.ru/docs/2022/KMU-2022-Proceedings-v4.pdf) (*DOI: 10.21046/KMU-2022-112-119*)
 
 > **Warning** :
-> Из-за особенностей метода поиска гладких функций, ошибки на "хвостах" получаются сильно больше, чем в середине. Если у вас много точек, то можно убрать такие точки на концах из рассмотрения, поскольку их ошибки будут несколько завышены.
+> *alpha* for any particular task can be very different from about *1e1* to *1e20*, so when choosing, first determine the power.
+
+See **example** in this repository for clarification on alpha parameter selection
+
+### Choice of the order of the differentiation operator ord
+
+As part of our task, we wanted to obtain a smooth acceleration function from the distance versus time data. The curve is smooth if the function has a continuous derivative, then in our case the order of the differentiation operator *ord* is 3, since the acceleration is the second derivative of the coordinate, and it must be smooth. Accordingly, to speed up the order of the differentiation operator *ord = 2*.
+
+
+### Using the Monte Carlo method
+
+The regularization method is not provided with tools for estimating the errors of derivatives, so the Monte Carlo method was used for these purposes. To use it a large number of times, a set of points is created for the distance within the error limits, and then the speed is calculated by the regularization method.
+
+To use it, you need to set the function parameters *mk = True* and set the number of iterations *num_mk*
+
+> **Warning** :
+> Due to the peculiarities of the method of searching for smooth functions, the errors on the "tails" are much larger than in the middle. If you have a lot of points, then you can remove such points at the ends from consideration, since their errors will be somewhat overestimated.
 
