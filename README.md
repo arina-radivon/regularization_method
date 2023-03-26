@@ -1,4 +1,4 @@
-## О методе
+## About the method
 
 This paper presents the implementation of the regularization method described in the article
 
@@ -7,7 +7,7 @@ IAN KNOWLES, ROBERT J. RENKA "METHODS FOR NUMERICAL DIFFERENTIATION OF NOISY DAT
 It allows you to search for derivatives and their errors for noisy data.
 For more information look [Differentiation of noisy data](https://ejde.math.txstate.edu/conf-proc/21/k3/knowles.pdf)
 
-## Содержание
+## Table of contents
 
 This repository contains several files:
 
@@ -19,7 +19,7 @@ This repository contains several files:
 
 *example_func.ipynb* - example of using the method on a mathematical function
 
-## Необходимые библиотеки
+## Libraries needed
 
 In order for the file to run on your local machine, you need to install the following libraries:
 
