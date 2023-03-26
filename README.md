@@ -24,7 +24,7 @@ This repository contains several files:
 
 This package is to be used with Python 3.x.x
 
-To install tha package write
+To install the package write
 
 ```python
 pip install regularization-derivatives
