@@ -19,14 +19,6 @@ This repository contains several files:
 
 *example_func.ipynb* - example of using the method on a mathematical function
 
-## Libraries needed
-
-In order for the file to run on your local machine, you need to install the following libraries:
-
-+ numpy
-+ scipy
-+ tqdm
-
 
 ## Installation
 
